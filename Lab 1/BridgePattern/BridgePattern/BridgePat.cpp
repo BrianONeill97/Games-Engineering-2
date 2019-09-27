@@ -1,12 +1,17 @@
 #include <iostream>
 #include <vector>
 
+// Bridge pattern is used to decouple an abstraction from it implementation  so that
+// they can vary
+
+//Bridge void set up
 class DrawApi {
 public:
 	virtual void Draw() = 0;
 	virtual void destroy() = 0;
 };
 
+// the implementation of the above functions
 class DrawImpl : public DrawApi {
 public:
 	void Draw() {
@@ -23,6 +28,7 @@ public:
 	virtual void destroy() = 0;
 };
 
+// implentation is called
 class Player : public Character {
 public:
 	Player(DrawApi* api) { this->api = api; }

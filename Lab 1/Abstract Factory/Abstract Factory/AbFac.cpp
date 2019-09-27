@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+// creates a base for the objects 
 class Character
 {
 public:
@@ -9,6 +10,7 @@ public:
 	virtual void destroy() = 0;
 };
 
+// alllows for new derived types of the base class without having to rely on a concrete class
 class Player : public Character
 {
 public: 
@@ -20,7 +22,7 @@ public:
 		std::cout << "Delete Player" << std::endl; delete this;
 	}
 };
-
+// allows for interchaging of implementation without changing the code that they use
 class Boss : public Character {
 public:
 	void draw() {

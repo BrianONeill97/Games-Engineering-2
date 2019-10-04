@@ -6,7 +6,7 @@
 
 #include "InputHandler.h"
 
-//#include "FSM.h"
+#include "FiniteStateMachine.h"
 
 class Game
 {
@@ -22,6 +22,9 @@ public:
 	void cleanUp();
 
 	bool running() { return isRunning; }
+
+	FiniteStateMachine *fsm;
+	State *state;
 
 private:
 	bool isRunning = false;

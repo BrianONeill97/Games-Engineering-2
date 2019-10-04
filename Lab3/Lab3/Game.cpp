@@ -1,7 +1,6 @@
 
 #include "Game.h"
 
-//#include "FSM.h"
 
 Game::Game() 
 {
@@ -12,6 +11,10 @@ Game::Game()
 
 	//Creates my Player
 	player = new Player();
+	fsm = new FiniteStateMachine();
+	state = new State();
+
+
 }
 
 
@@ -70,9 +73,13 @@ void Game::processEvents()
 /// Update the game world
 void Game::update()
 {
-	// Update character state
-	while (!commandQueue.empty()) {
-		commandQueue.back()->execute(player);
+	if (commandQueue.empty())
+	{
+		fsm->idle();
+	}
+	else while(!commandQueue.empty())
+	{
+		commandQueue.back()->execute(fsm);
 		commandQueue.pop_back();
 	}
 }

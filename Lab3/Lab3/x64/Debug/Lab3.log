@@ -1,0 +1,61 @@
+﻿  Climbing.cpp
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\Running.h(10,30): error C2061:  syntax error: identifier 'FiniteStateMachine'
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\Walking.h(9,30): error C2061:  syntax error: identifier 'FiniteStateMachine'
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\Idle.h(14,33): error C2061:  syntax error: identifier 'FiniteStateMachine'
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\Idle.h(15,33): error C2061:  syntax error: identifier 'FiniteStateMachine'
+  FiniteStateMachine.cpp
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\Idle.h(16,34): error C2061:  syntax error: identifier 'FiniteStateMachine'
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\Climbing.h(9,30): error C2061:  syntax error: identifier 'FiniteStateMachine'
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\Running.h(10,30): error C2061:  syntax error: identifier 'FiniteStateMachine'
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\Walking.h(9,30): error C2061:  syntax error: identifier 'FiniteStateMachine'
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\Idle.h(14,33): error C2061:  syntax error: identifier 'FiniteStateMachine'
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\Idle.h(15,33): error C2061:  syntax error: identifier 'FiniteStateMachine'
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\Idle.h(16,34): error C2061:  syntax error: identifier 'FiniteStateMachine'
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\FiniteStateMachine.cpp(14,28): error C2664:  'void State::walking(FSM *)': cannot convert argument 1 from 'FiniteStateMachine *' to 'FSM *'
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\FiniteStateMachine.cpp(14,24): message :  Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\FiniteStateMachine.cpp(19,28): error C2664:  'void State::running(FSM *)': cannot convert argument 1 from 'FiniteStateMachine *' to 'FSM *'
+  Game.cpp
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\FiniteStateMachine.cpp(19,24): message :  Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\State.h(9,1): error C2011:  'State': 'enum' type redefinition
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\InputHandler.h(19): message :  see declaration of 'State'
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\Climbing.h(9,30): error C2061:  syntax error: identifier 'FiniteStateMachine'
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\Running.h(10,30): error C2061:  syntax error: identifier 'FiniteStateMachine'
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\Walking.h(9,30): error C2061:  syntax error: identifier 'FiniteStateMachine'
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\Idle.h(10,1): error C2504:  'State': base class undefined
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\Idle.h(14,33): error C2061:  syntax error: identifier 'FiniteStateMachine'
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\Idle.h(15,33): error C2061:  syntax error: identifier 'FiniteStateMachine'
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\Idle.h(16,34): error C2061:  syntax error: identifier 'FiniteStateMachine'
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\FiniteStateMachine.h(9,12): error C2011:  'State': 'enum' type redefinition
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\InputHandler.h(19): message :  see declaration of 'State'
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\FiniteStateMachine.h(13,13): error C2011:  'State': 'enum' type redefinition
+  Idle.cpp
+  InputHandler.cpp
+  main.cpp
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\FiniteStateMachine.h(9): message :  see declaration of 'State'
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\State.h(9,1): error C2011:  'State': 'enum' type redefinition
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\InputHandler.h(19): message :  see declaration of 'State'
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\Climbing.h(9,30): error C2061:  syntax error: identifier 'FiniteStateMachine'
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\Running.h(10,30): error C2061:  syntax error: identifier 'FiniteStateMachine'
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\Walking.h(9,30): error C2061:  syntax error: identifier 'FiniteStateMachine'
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\Idle.h(10,1): error C2504:  'State': base class undefined
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\Idle.h(14,33): error C2061:  syntax error: identifier 'FiniteStateMachine'
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\Idle.h(15,33): error C2061:  syntax error: identifier 'FiniteStateMachine'
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\Idle.h(16,34): error C2061:  syntax error: identifier 'FiniteStateMachine'
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\FiniteStateMachine.h(9,12): error C2011:  'State': 'enum' type redefinition
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\InputHandler.h(19): message :  see declaration of 'State'
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\FiniteStateMachine.h(13,13): error C2011:  'State': 'enum' type redefinition
+  Player.cpp
+  Running.cpp
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\FiniteStateMachine.h(9): message :  see declaration of 'State'
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\Climbing.h(9,30): error C2061:  syntax error: identifier 'FiniteStateMachine'
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\Walking.h(9,30): error C2061:  syntax error: identifier 'FiniteStateMachine'
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\Idle.h(14,33): error C2061:  syntax error: identifier 'FiniteStateMachine'
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\Idle.h(15,33): error C2061:  syntax error: identifier 'FiniteStateMachine'
+  Walking.cpp
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\Idle.h(16,34): error C2061:  syntax error: identifier 'FiniteStateMachine'
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\Climbing.h(9,30): error C2061:  syntax error: identifier 'FiniteStateMachine'
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\Running.h(10,30): error C2061:  syntax error: identifier 'FiniteStateMachine'
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\Idle.h(14,33): error C2061:  syntax error: identifier 'FiniteStateMachine'
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\Idle.h(15,33): error C2061:  syntax error: identifier 'FiniteStateMachine'
+  Generating Code...
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab3\Lab3\Idle.h(16,34): error C2061:  syntax error: identifier 'FiniteStateMachine'

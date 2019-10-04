@@ -91,9 +91,11 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\devtools\SDL\SDL2-2.0.10\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
+      <AdditionalLibraryDirectories>C:\devtools\SDL\SDL2-2.0.10\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -127,15 +129,26 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Climbing.cpp" />
+    <ClCompile Include="FiniteStateMachine.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Idle.cpp" />
     <ClCompile Include="InputHandler.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Running.cpp" />
+    <ClCompile Include="Walking.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Climbing.h" />
+    <ClInclude Include="FiniteStateMachine.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="Idle.h" />
     <ClInclude Include="InputHandler.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="Running.h" />
+    <ClInclude Include="State.h" />
+    <ClInclude Include="Walking.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

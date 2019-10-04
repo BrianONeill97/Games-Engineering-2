@@ -2,6 +2,7 @@
 #include <vector>
 #include <SDL.h>
 #include "Player.h"
+#include "FiniteStateMachine.h"
 
 enum InputType
 {
@@ -16,7 +17,7 @@ enum Action
 	STOP = false
 };
 
-enum State
+enum inputState
 {
 	PRESSED = true,
 	RELEASED = false
@@ -26,7 +27,7 @@ class Command
 {
 public:
 	virtual ~Command() {}
-	virtual void execute(Player* player) = 0;
+	virtual void execute(FiniteStateMachine* fsm) = 0;
 	virtual InputType type() = 0;
 };
 
@@ -35,16 +36,16 @@ class InputHandler
 {
 	private:
 		//Pointers to my commands
-		Command* Q;
-		Command* W;
-		Command* E;
-		Command* R;
+		Command* Climbing;
+		Command* Running;
+		Command* Walking;
+		Command* Idle;
 
 		
 		std::map <int, Command*> commands;
 
 
-		std::map <int, State> state_map;
+		std::map <int, inputState> state_map;
 		std::map <int, Action> action_map;
 
 		bool inputToAction(); // converts the input into an action
@@ -66,30 +67,30 @@ public:
 };
 
 //Classes to call the functions body
-class TypeQ : public Command
+class Climb : public Command
 {
 public:
-	void execute(Player* player) { player->typeQ(); }
+	void execute(FiniteStateMachine* fsm) { fsm->climbing(); }
 	InputType type() { return STATE; }
 };
 
-class TypeW : public Command
+class Run : public Command
 {
 public:
-	void execute(Player* player) { player->typeW(); }
+	void execute(FiniteStateMachine* fsm) { fsm->running(); }
 	InputType type() { return STATE; }
 };
 
-class TypeE : public Command
+class Walk : public Command
 {
 public:
-	void execute(Player* player) { player->typeE(); }
+	void execute(FiniteStateMachine* fsm) { fsm->walking(); }
 	InputType type() { return STATE; }
 };
 
-class TypeR : public Command
+class Robin : public Command
 {
 public:
-	void execute(Player* player) { player->typeR(); }
+	void execute(FiniteStateMachine* fsm) { fsm->idle(); }
 	InputType type() { return STATE; }
 };

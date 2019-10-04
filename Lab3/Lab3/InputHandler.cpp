@@ -3,15 +3,15 @@
 InputHandler::InputHandler()
 {
 	//Creates pointers to all the commands
-	Q = new TypeQ();
-	W = new TypeW();
-	E = new TypeE();
-	R = new TypeR();
+	Climbing = new Climb();
+	Running = new Run();
+	Walking = new Walk();
+	Idle = new Robin();
 
-	commands[SDLK_q] = Q;
-	commands[SDLK_w] = W;
-	commands[SDLK_e] = E;
-	commands[SDLK_r] = R;
+	commands[SDLK_q] = Climbing;
+	commands[SDLK_w] = Running;
+	commands[SDLK_e] = Walking;
+	commands[SDLK_r] = Idle;
 
 }
 
@@ -97,6 +97,8 @@ void InputHandler::keydown(SDL_Event& event)
 void InputHandler::keyup(SDL_Event& event)
 {
 	state_map[event.key.keysym.sym] = RELEASED; // if the key has been released
+
+
 }
 
 bool InputHandler::is_held(int key)

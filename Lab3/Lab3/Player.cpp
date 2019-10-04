@@ -7,16 +7,13 @@ void Player::typeQ()
 void Player::typeW()
 {
 	std::cout << "W" << std::endl;
-
 }
 void Player::typeE()
 {
 	std::cout << "E" << std::endl;
-
 }
 void Player::typeR()
 {
 	std::cout << "R" << std::endl;
-
 }
-;
+

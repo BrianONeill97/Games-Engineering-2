@@ -67,6 +67,7 @@ public:
 };
 
 //Classes to call the functions body
+//Execution of States Changing
 class Climb : public Command
 {
 public:

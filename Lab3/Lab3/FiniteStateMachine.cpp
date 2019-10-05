@@ -9,6 +9,28 @@ FiniteStateMachine::~FiniteStateMachine()
 {
 }
 
+std::string FiniteStateMachine::getCurrent()
+{
+	FSMCheck = "";
+	if (currentState->stateCheck == 4)
+	{
+		FSMCheck = "idle";
+	}
+	if (currentState->stateCheck == 2)
+	{
+		FSMCheck = "running";
+	}
+	if (currentState->stateCheck == 1)
+	{
+		FSMCheck = "walking";
+	}
+	if (currentState->stateCheck == 3)
+	{
+		FSMCheck = "climbing";
+	}
+	return FSMCheck;
+}
+
 void FiniteStateMachine::walking()
 {
 	currentState->walking(this);

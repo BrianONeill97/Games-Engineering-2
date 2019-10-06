@@ -16,3 +16,10 @@ void Running::idle(FiniteStateMachine* a)
 	delete this;
 }
 
+void Running::walking(FiniteStateMachine* a)
+{
+	std::cout << "Running to walking" << std::endl;
+	a->setCurrent(new Walking());
+	delete this;
+}
+

@@ -6,7 +6,7 @@ InputHandler::InputHandler()
 	Climbing = new Climb();
 	Running = new Run();
 	Walking = new Walk();
-	Idle = new Robin();
+	Idle = new Standing();
 
 	commands[SDLK_q] = Climbing;
 	commands[SDLK_w] = Running;

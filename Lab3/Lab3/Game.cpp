@@ -25,7 +25,7 @@ Game::~Game()
 void Game::init(const char* title, int xPos, int yPos, int width, int height, bool fullscreen)
 {
 	playerPos.x = playerPos.y = 0;
-	playerPos.w = playerPos.h = 128;
+	playerPos.w = playerPos.h = 256;
 	int flags = 0;
 
 	int imgFlags = IMG_INIT_PNG;
@@ -64,14 +64,18 @@ void Game::init(const char* title, int xPos, int yPos, int width, int height, bo
 		isRunning = false;
 	}
 
+	//Loads the image
 	currentImage = LoadTexture("spritesheet.png", renderer);
 
+	//Used for animation
 	SDL_QueryTexture(currentImage, NULL, NULL, &textureWidth, &textureHeight);
 
 	frameWidth = textureWidth / 13;
 	frameHeight = textureHeight / 21;
 
+	//Start of the animation of on the horizontal 
 	playerRect.x = 0;
+	//Width and height of the frames of tha animation
 	playerRect.w = frameWidth;
 	playerRect.h = frameHeight;
 }
@@ -79,27 +83,26 @@ void Game::init(const char* title, int xPos, int yPos, int width, int height, bo
 /// handle user and system events/ input
 void Game::processEvents()
 {
-	while (!exit)
-	{
 		//Handles all the inputs
-		exit = inputHandler->generateInputs(commandQueue);
-		update();
-		render();
+		inputHandler->generateInputs(commandQueue);
 
-	}
+		//update();
+		////Here since had an error where no image would render so placed here and it was fixed.
+		//render();
 }
 
 
 /// Update the game world
 void Game::update()
 {
-
+	//Adds to the time and once the time gets to 15 frames the n the animation change, change this depending on the refresh rate of the monitor 
 	frameTime++;
 	if (FPS / frameTime == 11)
 	{
 		frameTime = 0;
 		playerRect.x += frameWidth;
 
+		//WRAPS it around
 		if (playerRect.x >= textureWidth)
 		{
 			playerRect.x = 0;
@@ -109,7 +112,7 @@ void Game::update()
 
 	if (commandQueue.empty())
 	{
-		fsm->idle();
+			fsm->idle();
 	}
 	else while(!commandQueue.empty())
 	{
@@ -117,9 +120,10 @@ void Game::update()
 		commandQueue.pop_back();
 	}
 
+	//Checking the current state of the player
 	if (fsm->getCurrent() == "idle")
 	{
-		playerRect.y = getFrame(20, 64);
+		playerRect.y = getFrame(20, 64); // changes the x to the different animation
 	}
 
 	if (fsm->getCurrent() == "climbing")
@@ -169,15 +173,15 @@ void Game::cleanUp()
 SDL_Texture* Game::LoadTexture(std::string file, SDL_Renderer* render)
 {
 	SDL_Texture* texture = nullptr;
-	SDL_Surface* surface = IMG_Load(file.c_str());
+	SDL_Surface* surface = IMG_Load(file.c_str()); // load the image
 
-	if (surface == NULL)
+	if (surface == NULL) // if the image does not load correctly
 	{
 		std::cout << "Error" << std::endl;
 	}
 	else
 	{
-		texture = SDL_CreateTextureFromSurface(render, surface);
+		texture = SDL_CreateTextureFromSurface(render, surface); // sets the texture from the surface
 		if (texture == NULL)
 		{
 			std::cout << "Error" << std::endl;

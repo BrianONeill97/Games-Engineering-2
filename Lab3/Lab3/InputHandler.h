@@ -54,7 +54,6 @@ class InputHandler
 		void keydown(SDL_Event& event); // checks to see if the key is pressed
 		void keyup(SDL_Event& event); // checks if the key is not pressed
 
-		bool is_held(int key); // if the buttons is being held
 		bool was_pressed(int key); 
 
 public:
@@ -62,6 +61,7 @@ public:
 	~InputHandler();
 	bool generateInputs(std::vector<Command*>& command_queue); // creates the input commands
 	void bindings(int key, Command* command); // binds the keys to a command
+	bool is_held(int key); // if the buttons is being held
 
 
 };
@@ -89,7 +89,7 @@ public:
 	InputType type() { return STATE; }
 };
 
-class Robin : public Command
+class Standing : public Command
 {
 public:
 	void execute(FiniteStateMachine* fsm) { fsm->idle(); }

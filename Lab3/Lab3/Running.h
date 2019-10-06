@@ -10,5 +10,6 @@ public:
 	~Running();
 
 	void idle(FiniteStateMachine* a);
+	void walking(FiniteStateMachine* a);
 };
 

@@ -9,5 +9,7 @@ public:
 	Walking();
 	~Walking();
 	void idle(FiniteStateMachine* a);
+	void running(FiniteStateMachine* a);
+
 };
 

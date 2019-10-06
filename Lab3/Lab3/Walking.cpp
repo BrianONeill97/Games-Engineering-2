@@ -14,3 +14,10 @@ void Walking::idle(FiniteStateMachine* a)
 	a->setCurrent(new Idle());
 	delete this;
 }
+
+void Walking::running(FiniteStateMachine* a)
+{
+	std::cout << "Walking to running" << std::endl;
+	a->setCurrent(new Running());
+	delete this;
+}

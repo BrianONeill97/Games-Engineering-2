@@ -25,7 +25,7 @@ Game::~Game()
 void Game::init(const char* title, int xPos, int yPos, int width, int height, bool fullscreen)
 {
 	playerPos.x = playerPos.y = 0;
-	playerPos.w = playerPos.h = 256;
+	playerPos.w = playerPos.h = 256; // size of the character
 	int flags = 0;
 
 	int imgFlags = IMG_INIT_PNG;
@@ -110,7 +110,7 @@ void Game::update()
 	}
 
 
-	if (commandQueue.empty())
+	if (commandQueue.empty() &&  fsm->fallAfterJump == false && fsm->jumpingState == false)
 	{
 			fsm->idle();
 	}
@@ -123,7 +123,12 @@ void Game::update()
 	//Checking the current state of the player
 	if (fsm->getCurrent() == "idle")
 	{
-		playerRect.y = getFrame(20, 64); // changes the x to the different animation
+		playerRect.y = getFrame(2, 64); // changes the x to the different animation
+		//WRAPS it around since there is white space, if there isnt any then this is uncesscary
+		if (playerRect.x >= 448)
+		{
+			playerRect.x = 0;
+		}
 	}
 
 	if (fsm->getCurrent() == "climbing")
@@ -133,13 +138,32 @@ void Game::update()
 
 	if (fsm->getCurrent() == "walking")
 	{
-		playerRect.y = getFrame(6, 64);
+		
+		playerRect.y = getFrame(9, 64);
+		//WRAPS it around since there is white space, if there isnt any then this is uncesscary
+		if (playerRect.x >= 448)
+		{
+			playerRect.x = 0;
+		}
+		
 	}
 
-	if (fsm->getCurrent() == "running")
+	if (fsm->getCurrent() == "jumping")
 	{
-		playerRect.y = getFrame(18, 64);
+		playerRect.y = getFrame(19, 64);
+
 	}
+
+	if (fsm->getCurrent() == "falling")
+	{
+		playerRect.y = getFrame(4, 64);
+		//WRAPS it around since there is white space, if there isnt any then this is uncesscary
+		if (playerRect.x >= 448)
+		{
+			playerRect.x = 0;
+		}
+	}
+
 }
 
 /// draw the frame and then switch bufers

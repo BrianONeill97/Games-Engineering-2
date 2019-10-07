@@ -16,9 +16,9 @@ public:
 		stateCheck = 1;
 	}
 
-	virtual void running(FiniteStateMachine* a)
+	virtual void jumping(FiniteStateMachine* a)
 	{
-		//std::cout << "State running" << std::endl;
+		//std::cout << "State jumping" << std::endl;
 		stateCheck = 2;
 	}
 
@@ -32,6 +32,12 @@ public:
 	{
 		//std::cout << "State idle" << std::endl;
 		stateCheck = 4;
+	}
+
+	virtual void falling(FiniteStateMachine* a)
+	{
+		//std::cout << "State falling" << std::endl;
+		stateCheck = 5;
 	}
 
 };

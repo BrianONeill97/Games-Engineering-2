@@ -21,12 +21,17 @@ public:
 	std::string getCurrent();
 
 	void walking();
-	void running();
+	void jumping();
 	void climbing();
 	void idle();
+	void falling();
 
-	std::string FSMCheck;
+	std::string FSMCheck = "idle";
 
+
+	bool fallAfterJump = false;
+	bool jumpingState = false;
+	int count = 0;
 
 };
 

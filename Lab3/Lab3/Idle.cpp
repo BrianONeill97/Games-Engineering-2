@@ -34,3 +34,13 @@ void Idle::climbing(FiniteStateMachine* a)
 	//when finished being used it is deleted
 	delete this;
 }
+
+void Idle::jumping(FiniteStateMachine* a)
+{
+	std::cout << "jumping" << std::endl;
+	//sets the current state 
+	a->setCurrent(new Jumping());
+	//when finished being used it is deleted
+	delete this;
+
+}

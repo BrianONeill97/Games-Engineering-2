@@ -37,9 +37,10 @@ class InputHandler
 	private:
 		//Pointers to my commands
 		Command* Climbing;
-		Command* Running;
+		Command* Jumping;
 		Command* Walking;
 		Command* Idle;
+		Command* Falling;
 
 		
 		std::map <int, Command*> commands;
@@ -75,10 +76,10 @@ public:
 	InputType type() { return STATE; }
 };
 
-class Run : public Command
+class Jump : public Command
 {
 public:
-	void execute(FiniteStateMachine* fsm) { fsm->running(); }
+	void execute(FiniteStateMachine* fsm) { fsm->jumping(); }
 	InputType type() { return STATE; }
 };
 
@@ -93,5 +94,12 @@ class Standing : public Command
 {
 public:
 	void execute(FiniteStateMachine* fsm) { fsm->idle(); }
+	InputType type() { return STATE; }
+};
+
+class Fall : public Command
+{
+public:
+	void execute(FiniteStateMachine* fsm) { fsm->falling(); }
 	InputType type() { return STATE; }
 };

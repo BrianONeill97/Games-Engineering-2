@@ -18,7 +18,18 @@ std::string FiniteStateMachine::getCurrent()
 	}
 	if (currentState->stateCheck == 2)
 	{
-		FSMCheck = "running";
+		jumpingState = true;
+		FSMCheck = "jumping";
+		count++;
+
+		if (count >= 300)
+		{
+			fallAfterJump = true;
+			jumpingState = false;
+			currentState->stateCheck = 5;
+			count = 0;
+		}
+		
 	}
 	if (currentState->stateCheck == 1)
 	{
@@ -28,6 +39,17 @@ std::string FiniteStateMachine::getCurrent()
 	{
 		FSMCheck = "climbing";
 	}
+	if (fallAfterJump == true)
+	{
+		FSMCheck = "falling";
+		falling();
+		count++;
+		if (count >= 300)
+		{
+			fallAfterJump = false;
+			count = 0;
+		}
+	}
 	return FSMCheck;
 }
 
@@ -36,9 +58,9 @@ void FiniteStateMachine::walking()
 	currentState->walking(this);
 }
 
-void FiniteStateMachine::running()
+void FiniteStateMachine::jumping()
 {
-	currentState->running(this);
+	currentState->jumping(this);
 }
 
 void FiniteStateMachine::climbing()
@@ -49,4 +71,9 @@ void FiniteStateMachine::climbing()
 void FiniteStateMachine::idle()
 {
 	currentState->idle(this);
+}
+
+void FiniteStateMachine::falling()
+{
+	currentState->falling(this);
 }

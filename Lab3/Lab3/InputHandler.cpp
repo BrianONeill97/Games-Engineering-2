@@ -4,14 +4,15 @@ InputHandler::InputHandler()
 {
 	//Creates pointers to all the commands
 	Climbing = new Climb();
-	Running = new Run();
+	Jumping = new Jump();
 	Walking = new Walk();
 	Idle = new Standing();
 
-	commands[SDLK_q] = Climbing;
-	commands[SDLK_w] = Running;
-	commands[SDLK_e] = Walking;
+	commands[SDLK_1] = Climbing;
+	commands[SDLK_2] = Jumping;
+	commands[SDLK_3] = Walking;
 	commands[SDLK_r] = Idle;
+	//commands[SDLK_1] = Falling;
 
 }
 

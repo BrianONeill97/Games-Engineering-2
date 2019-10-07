@@ -40,7 +40,7 @@ private:
 	SDL_Rect playerPos;
 	int frameWidth, frameHeight;
 	int textureWidth, textureHeight; 
-	const int FPS = 165;
+	const int FPS = 59; // based on the monitors refresh rate 
 	int frameTime = 0;
 	int getFrame(int verticalSpriteNumber, int spriteSize);
 

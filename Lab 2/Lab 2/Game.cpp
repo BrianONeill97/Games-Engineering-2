@@ -91,6 +91,8 @@ void Game::processKeys(sf::Event t_event)
 	{
 		m_exitGame = true;
 	}
+	handle.handleInput();
+
 
 }
 
@@ -104,7 +106,6 @@ void Game::update(sf::Time t_deltaTime)
 	{
 		m_window.close();
 	}
-	handle.handleInput();
 
 }
 

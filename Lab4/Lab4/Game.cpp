@@ -48,6 +48,11 @@ void Game::init(const char* title, int xPos, int yPos, int width, int height, bo
 		isRunning = false;
 	}
 
+	//m_player.playerInit(renderer);
+
+	entity.addComponents(hc);
+	hs.addEntity(entity);
+
 }
 
 /// handle user and system events/ input
@@ -76,7 +81,7 @@ void Game::render()
 	SDL_RenderClear(renderer);
 
 	//Draw here
-
+	//m_player.render(renderer);
 	//Presents the new Images
 	SDL_RenderPresent(renderer);
 }

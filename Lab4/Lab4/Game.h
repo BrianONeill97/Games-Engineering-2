@@ -5,6 +5,9 @@
 #include <SDL_image.h>
 #include <iostream>
 
+//#include "Player.h"
+#include "ECS.h"
+
 class Game
 {
 public:
@@ -19,6 +22,14 @@ public:
 	void cleanUp();
 
 	bool running() { return isRunning; }
+
+	//Player m_player;
+
+	Entity entity;
+
+	HealthComponent hc;
+	HealthSystem hs;
+	
 
 private:
 	bool isRunning = false;

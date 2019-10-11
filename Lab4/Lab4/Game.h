@@ -5,7 +5,6 @@
 #include <SDL_image.h>
 #include <iostream>
 
-//#include "Player.h"
 #include "ECS.h"
 
 class Game
@@ -23,9 +22,9 @@ public:
 
 	bool running() { return isRunning; }
 
-	//Player m_player;
 
 	Entity entity;
+
 
 	HealthComponent hc;
 	HealthSystem hs;
@@ -39,7 +38,6 @@ private:
 
 	bool m_exitGame; // control exiting game
 
-	int i = 0;
 };
 
 #endif // !GAME

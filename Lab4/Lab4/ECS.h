@@ -1,6 +1,6 @@
 #pragma once
-#include <vector>
 #include <iostream>
+#include <vector>
 
 class Component
 {
@@ -15,7 +15,10 @@ public:
 	void addComponents(Component c) { components.push_back(c); }
 	void removeComponent(Component c) { /* TBI */ }
 
-	std::vector<Component> getComponents() { return components; }
+	std::vector<Component> getComponents() 
+	{
+	return components; 
+	}
 
 private:
 	std::vector<Component> components;
@@ -45,6 +48,5 @@ public:
 	void addEntity(Entity e) { entities.push_back(e); }
 	void update() 
 	{
-		std::cout << "HealthSystem Update" << std::endl;
 	}
 };

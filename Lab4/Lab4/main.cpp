@@ -23,7 +23,7 @@ int main(int argc, char* argv[])
 
 
 
-	game->init("Lab 3", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 600, false);
+	game->init("Lab 4 - ECS", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 600, false);
 
 	while (game->running() == true)
 	{

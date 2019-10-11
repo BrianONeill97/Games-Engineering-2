@@ -48,10 +48,10 @@ void Game::init(const char* title, int xPos, int yPos, int width, int height, bo
 		isRunning = false;
 	}
 
-	//m_player.playerInit(renderer);
-
+	//Player
 	entity.addComponents(hc);
 	hs.addEntity(entity);
+
 
 }
 
@@ -60,18 +60,15 @@ void Game::processEvents()
 {
 		//Handles all the inputs
 
-		//update();
-		////Here since had an error where no image would render so placed here and it was fixed.
-		//render();
 }
 
 
 /// Update the game world
 void Game::update()
 {
-	//Adds to the time and once the time gets to 15 frames the n the animation change, change this depending on the refresh rate of the monitor 
-	i++;
-	std::cout << i << std::endl;
+	hs.update();
+	std::cout << hc.getHealth() << std::endl;
+
 }
 
 /// draw the frame and then switch bufers
@@ -80,8 +77,10 @@ void Game::render()
 	//Clears image after every frame
 	SDL_RenderClear(renderer);
 
+
 	//Draw here
-	//m_player.render(renderer);
+
+
 	//Presents the new Images
 	SDL_RenderPresent(renderer);
 }

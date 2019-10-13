@@ -24,8 +24,8 @@ Game::~Game()
 
 void Game::init(const char* title, int xPos, int yPos, int width, int height, bool fullscreen)
 {
-	playerPos.x = playerPos.y = 0;
-	playerPos.w = playerPos.h = 512; // size of the character
+	playerPos.x = playerPos.y = 200;
+	playerPos.w = playerPos.h = 128; // size of the character
 	int flags = 0;
 
 	int imgFlags = IMG_INIT_PNG;

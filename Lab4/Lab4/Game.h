@@ -6,6 +6,9 @@
 #include <iostream>
 
 #include "ECS.h"
+#include <string>
+#include "Player.h"
+
 
 class Game
 {
@@ -22,13 +25,22 @@ public:
 
 	bool running() { return isRunning; }
 
+	SDL_Surface *screenSurface;
 
-	Entity entity;
+	RenderSystem renderSystem;
+
+	Player player;
 
 
-	HealthComponent hc;
-	HealthSystem hs;
-	
+	//Dog
+	Entity dog;
+	HealthComponent dogHC;
+	PositionComponent dogPC;
+
+	//Cat
+	Entity cat;
+	HealthComponent catHC;
+	PositionComponent catPC;
 
 private:
 	bool isRunning = false;

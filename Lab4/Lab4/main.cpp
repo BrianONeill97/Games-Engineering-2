@@ -11,6 +11,8 @@ using namespace std;
 using namespace std;
 int main(int argc, char* argv[])
 {
+	srand(time(0)); // sets the seed 
+
 	DEBUG_MSG("Game Object Created");
 	Game* game = new Game();
 

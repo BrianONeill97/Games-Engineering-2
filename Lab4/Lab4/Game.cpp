@@ -40,6 +40,7 @@ void Game::init(const char* title, int xPos, int yPos, int width, int height, bo
 
 		}
 
+
 		isRunning = true;
 
 	}
@@ -48,37 +49,54 @@ void Game::init(const char* title, int xPos, int yPos, int width, int height, bo
 		isRunning = false;
 	}
 
-	//Player
-	entity.addComponents(hc);
-	hs.addEntity(entity);
+	screenSurface = SDL_CreateRGBSurface(0, width, height, 32, 0, 0, 0, 0);
 
 
+
+
+	//Dog
+	dogPC.setPos(400,200);
+	dog.addComponents(dogPC);
+
+	//cat
+	catPC.setPos(100, 400);
+	cat.addComponents(catPC);	
+
+	renderSystem.addEntity(dog, dogPC, "Dog");
+	renderSystem.addEntity(cat, catPC, "Cat");
+
+	renderSystem.init();
+	
 }
 
 /// handle user and system events/ input
 void Game::processEvents()
 {
 		//Handles all the inputs
-
 }
 
 
 /// Update the game world
 void Game::update()
 {
-	hs.update();
-	std::cout << hc.getHealth() << std::endl;
+	//player.update();
+	//HS.update();
+	renderSystem.update();
 
+
+	system("CLS");
 }
 
 /// draw the frame and then switch bufers
 void Game::render()
 {
+	SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
 	//Clears image after every frame
 	SDL_RenderClear(renderer);
 
-
 	//Draw here
+	renderSystem.draw(renderer);
+
 
 
 	//Presents the new Images

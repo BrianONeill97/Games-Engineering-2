@@ -180,14 +180,8 @@ public:
 
 			entities.at(i).rect.x = positions.at(i).getX();
 			entities.at(i).rect.y = positions.at(i).getY();
-
-			
-
-		}
-		
+		}		
 	}
-
-
 	void update()
 	{
 			for (int i = 0; i < positions.size(); i++)
@@ -203,6 +197,29 @@ public:
 		{
 			SDL_SetRenderDrawColor(render, entities.at(i).r, entities.at(i).g, entities.at(i).b, 255);
 			SDL_RenderFillRect(render, &entities.at(i).rect);
+		}
+	}
+};
+
+class AiSystem
+{
+	std::vector<Entity> entities;
+	std::vector<PositionComponent> positions;
+	std::vector<HealthComponent> healths;
+	std::vector<std::string> entityName;
+
+public:
+	void addEntity(Entity e, PositionComponent pc,HealthComponent hc, std::string name) { entities.push_back(e); positions.push_back(pc); healths.push_back(hc); entityName.push_back(name); }
+
+	void update()
+	{
+		for (int i = 0; i < positions.size(); i++)
+		{
+			positions.at(i).move(1, 1);
+			entities.at(i).rect.x = positions.at(i).getX();
+			entities.at(i).rect.y = positions.at(i).getY();
+
+			std::cout << entityName.at(i) << " X : " << positions.at(i).getX() << "   ,   " << " Y : " << positions.at(i).getY() << std::endl;
 		}
 	}
 };

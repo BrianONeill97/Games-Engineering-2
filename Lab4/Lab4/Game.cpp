@@ -13,10 +13,8 @@ Game::~Game()
 }
 
 void Game::init(const char* title, int xPos, int yPos, int width, int height, bool fullscreen)
-{
-	
+{	
 	int flags = 0;
-
 
 	if (fullscreen == true)
 	{
@@ -37,12 +35,8 @@ void Game::init(const char* title, int xPos, int yPos, int width, int height, bo
 		{
 			SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
 			std::cout << "Renderer Created" << std::endl;
-
 		}
-
-
 		isRunning = true;
-
 	}
 	else
 	{
@@ -51,22 +45,24 @@ void Game::init(const char* title, int xPos, int yPos, int width, int height, bo
 
 	screenSurface = SDL_CreateRGBSurface(0, width, height, 32, 0, 0, 0, 0);
 
-
-
-
 	//Dog
 	dogPC.setPos(400,200);
 	dog.addComponents(dogPC);
+	dog.addComponents(dogHC);
 
 	//cat
 	catPC.setPos(100, 400);
 	cat.addComponents(catPC);	
+	cat.addComponents(catHC);
 
 	renderSystem.addEntity(dog, dogPC, "Dog");
 	renderSystem.addEntity(cat, catPC, "Cat");
 
-	renderSystem.init();
-	
+	aiSystem.addEntity(dog, dogPC, dogHC, "Dog");
+	aiSystem.addEntity(cat, catPC, catHC, "cat");
+
+
+	renderSystem.init();	
 }
 
 /// handle user and system events/ input
@@ -79,10 +75,9 @@ void Game::processEvents()
 /// Update the game world
 void Game::update()
 {
-	//player.update();
-	//HS.update();
-	renderSystem.update();
+	aiSystem.update();
 
+	renderSystem.update();
 
 	system("CLS");
 }
@@ -96,8 +91,6 @@ void Game::render()
 
 	//Draw here
 	renderSystem.draw(renderer);
-
-
 
 	//Presents the new Images
 	SDL_RenderPresent(renderer);

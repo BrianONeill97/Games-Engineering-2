@@ -28,6 +28,7 @@ public:
 	SDL_Surface *screenSurface;
 
 	RenderSystem renderSystem;
+	AiSystem aiSystem;
 
 	Player player;
 

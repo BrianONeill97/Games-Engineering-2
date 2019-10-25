@@ -1,27 +1,27 @@
 ﻿  Game.cpp
-C:\Users\Brian\Desktop\Games-Engineering-2\Lab 4 - ECS\ECS\ECS.h(147,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Brian\Desktop\Games-Engineering-2\Lab 4 - ECS\ECS\ECS.h(149,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Brian\Desktop\Games-Engineering-2\Lab 4 - ECS\ECS\ECS.h(163,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Brian\Desktop\Games-Engineering-2\Lab 4 - ECS\ECS\ECS.h(185,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Brian\Desktop\Games-Engineering-2\Lab 4 - ECS\ECS\ECS.h(207,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Brian\Desktop\Games-Engineering-2\Lab 4 - ECS\ECS\ECS.h(209,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Brian\Desktop\Games-Engineering-2\Lab 4 - ECS\ECS\ECS.h(223,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Brian\Desktop\Games-Engineering-2\Lab 4 - ECS\ECS\ECS.h(243,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Brian\Desktop\Games-Engineering-2\Lab 4 - ECS\ECS\ECS.h(255,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Brian\Desktop\Games-Engineering-2\Lab 4 - ECS\ECS\ECS.h(261,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab 4 - ECS\ECS\ECS.h(153,21): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab 4 - ECS\ECS\ECS.h(155,22): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab 4 - ECS\ECS\ECS.h(172,21): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab 4 - ECS\ECS\ECS.h(194,21): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab 4 - ECS\ECS\ECS.h(216,21): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab 4 - ECS\ECS\ECS.h(218,22): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab 4 - ECS\ECS\ECS.h(232,21): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab 4 - ECS\ECS\ECS.h(252,21): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab 4 - ECS\ECS\ECS.h(264,21): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab 4 - ECS\ECS\ECS.h(270,21): warning C4018:  '<': signed/unsigned mismatch
   main.cpp
-C:\Users\Brian\Desktop\Games-Engineering-2\Lab 4 - ECS\ECS\ECS.h(270,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Brian\Desktop\Games-Engineering-2\Lab 4 - ECS\ECS\ECS.h(147,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Brian\Desktop\Games-Engineering-2\Lab 4 - ECS\ECS\ECS.h(149,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Brian\Desktop\Games-Engineering-2\Lab 4 - ECS\ECS\ECS.h(163,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Brian\Desktop\Games-Engineering-2\Lab 4 - ECS\ECS\ECS.h(185,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Brian\Desktop\Games-Engineering-2\Lab 4 - ECS\ECS\ECS.h(207,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Brian\Desktop\Games-Engineering-2\Lab 4 - ECS\ECS\ECS.h(209,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Brian\Desktop\Games-Engineering-2\Lab 4 - ECS\ECS\ECS.h(223,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Brian\Desktop\Games-Engineering-2\Lab 4 - ECS\ECS\ECS.h(243,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Brian\Desktop\Games-Engineering-2\Lab 4 - ECS\ECS\ECS.h(255,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Brian\Desktop\Games-Engineering-2\Lab 4 - ECS\ECS\ECS.h(261,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Brian\Desktop\Games-Engineering-2\Lab 4 - ECS\ECS\ECS.h(270,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab 4 - ECS\ECS\ECS.h(279,21): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab 4 - ECS\ECS\ECS.h(153,21): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab 4 - ECS\ECS\ECS.h(155,22): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab 4 - ECS\ECS\ECS.h(172,21): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab 4 - ECS\ECS\ECS.h(194,21): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab 4 - ECS\ECS\ECS.h(216,21): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab 4 - ECS\ECS\ECS.h(218,22): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab 4 - ECS\ECS\ECS.h(232,21): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab 4 - ECS\ECS\ECS.h(252,21): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab 4 - ECS\ECS\ECS.h(264,21): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab 4 - ECS\ECS\ECS.h(270,21): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab 4 - ECS\ECS\ECS.h(279,21): warning C4018:  '<': signed/unsigned mismatch
   Generating Code...
-C:\Users\Brian\Desktop\Games-Engineering-2\Lab 4 - ECS\ECS\main.cpp(12,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  ECS.vcxproj -> C:\Users\Brian\Desktop\Games-Engineering-2\Lab 4 - ECS\Debug\ECS.exe
+C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab 4 - ECS\ECS\main.cpp(12,12): warning C4244:  'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  ECS.vcxproj -> C:\Users\Brian\Desktop\4th Year\Games-Engineering-2\Lab 4 - ECS\Debug\ECS.exe

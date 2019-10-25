@@ -31,11 +31,18 @@ class Component
 public:
 	int componentId;
 
+	//Here so dynamic pointer cast works
 	virtual void getId()
 	{
-
+		//Does nothing, should return the id (Didnt get it in in time)
 	};
 };
+// _______ .__   __. .___________. __  .___________.____    ____ 
+//|   ____||  \ |  | |           ||  | |           |\   \  /   / 
+//|  |__   |   \|  | `---|  |----`|  | `---|  |----` \   \/   /  
+//|   __|  |  . `  |     |  |     |  |     |  |       \_    _/   
+//|  |____ |  |\   |     |  |     |  |     |  |         |  |     
+//|_______||__| \__|     |__|     |__|     |__|         |__|   
 
 class Entity
 {
@@ -57,6 +64,7 @@ public:
 	
 	std::vector<std::shared_ptr<Component>> getComponent()
 	{
+		//returns my vector of components so they can be used in systems
 		return std::vector<std::shared_ptr<Component>>(components);
 	}
 
@@ -117,8 +125,6 @@ public:
 
 };
 
-
-
  /*
   ____          _                     
 /  ___|         | |                    
@@ -150,7 +156,10 @@ public:
 			{
 				if (typeid(*(entities.at(i).getComponent().at(j))) == typeid(HealthComponent))
 				{
+					//converts from type component to healthComponent at run time.
 					healthPtr.push_back(std::dynamic_pointer_cast<HealthComponent>(entities.at(i).getComponent().at(j)));
+
+
 					healthPtr.at(i) = std::make_shared <HealthComponent>();
 				}
 				else

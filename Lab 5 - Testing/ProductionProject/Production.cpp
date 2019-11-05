@@ -2,6 +2,7 @@
 
 bool Production::someMethod()
 {
+	bool result = false;
 	int temp = 0;
 	std::vector<int> nums;
 	std::cout << "Enter Number between 1 - 46. It must not have any Duplicates, \nEnter Your Numbers: ";
@@ -16,7 +17,7 @@ bool Production::someMethod()
 			if (nums.at(i) < 1 || nums.at(i) > 46)
 			{
 				std::cout << "Too Big" << std::endl;
-				return false;
+				result = false;
 			}
 	}
 
@@ -24,11 +25,13 @@ bool Production::someMethod()
 	if (it == nums.end())
 	{
 		std::cout << "Correct" << std::endl;
-		return true;
+		result = true;
 	}
 	else
 	{
 		std::cout << "Duplicates" << std::endl;
-		return false;
+		result = false;
 	}
+
+	return result;
 }

@@ -1,0 +1,1 @@
+-record(player, {name, gamer_tag, points, achievements = []}).
